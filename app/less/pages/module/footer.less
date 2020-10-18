@@ -1,0 +1,163 @@
+.footer {
+  text-align: center;
+  background-color: #1f2732;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 90px;
+    background-color: #1f2732;
+    clip-path: polygon(0 60%, 0% 100%, 100% 100%);
+    left: 0;
+    top: -90px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 90px;
+    background-color: #1f2732;
+    clip-path: polygon(100% 60%, 0% 100%, 100% 100%);
+    right: 0;
+    top: -90px;
+  }
+
+  .lit-logo {
+    img {
+      margin-top: -40px;
+    }
+  }
+
+  .logo {
+    padding: 7px 0 42px 25px;
+  }
+
+  .title {
+    p {
+      color: #bdbdbd;
+      font-weight: 600;
+      font-size: 13.4px;
+    }
+  }
+
+  .connect {
+    .img-text {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0 32px;
+      align-items: center;
+
+      .img {}
+
+      .text {
+        padding-left: 10px;
+
+        p {
+          color: #f4f4f4;
+          font-weight: 400;
+          font-family: "Opensan-regular";
+          font-size: 16px;
+          margin: unset;
+        }
+      }
+    }
+
+    .img-text1 {
+      justify-content: flex-end;
+    }
+
+    .img-text2 {
+      justify-content: unset;
+    }
+
+    .icon {
+      color: #ebebeb;
+      font-size: 17px;
+
+      .fab {
+        padding-right: 18px;
+        cursor: pointer;
+
+        &:hover {
+          color: greenyellow;
+        }
+      }
+    }
+  }
+
+  .license {
+    margin-top: 46px;
+    padding: 25px 0 27px;
+    border-top: 1px solid rgba(245, 245, 245, 43%);
+    ;
+
+    p {
+      color: white;
+      font-weight: 400;
+      font-family: "Opensan-regular";
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+
+    .connect .img-text .text p {
+      font-size: 15px;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      width: 50%;
+      height: 90px;
+      top: -88px;
+      background-color: #1f2732;
+      content: "";
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    .logo {
+      padding: 7px 0 20px 25px;
+    }
+
+    .connect .img-text {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer .connect .img-text {}
+}
+
+@media screen and (max-width: 479px) {
+  .footer {
+    .title p {
+      color: #bdbdbd;
+      font-weight: 600;
+      font-size: 12.4px;
+    }
+
+    .connect {
+      .img-text {
+        padding-left: 0;
+
+        .text p {
+          font-size: 13px;
+        }
+      }
+
+      .icon .fab {
+        padding-right: 10px;
+      }
+    }
+  }
+}
